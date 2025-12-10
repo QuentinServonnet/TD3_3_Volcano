@@ -25,5 +25,10 @@ namespace Volcano
         {
             this.Content = new UCChoixPersonnage();
         }
+
+        private void but_parametre_Click(object sender, RoutedEventArgs e)
+        {
+            this.Content = new UCParametres();
+        }
     }
 }

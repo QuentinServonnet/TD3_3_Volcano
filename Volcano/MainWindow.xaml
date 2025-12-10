@@ -15,7 +15,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="but_parametre" Content="Paramètre" Canvas.Left="299" Canvas.Top="335" Height="50" Width="202" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFFFAD21" Foreground="White">
+        <Button x:Name="but_parametre" Content="Paramètre" Canvas.Left="299" Canvas.Top="335" Height="50" Width="202" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFFFAD21" Foreground="White" Click="but_parametre_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
