@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:Volcano"
         mc:Ignorable="d"
         Title="UCChoixPersonnage" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Canvas>
+        <Canvas.Background>
+            <ImageBrush ImageSource="/image/image choix personnage.png"/>
+        </Canvas.Background>
+        <Label x:Name="Choix_du_personnage" Content="Choisissez votre personnage" Canvas.Left="157" Canvas.Top="44" HorizontalAlignment="Left" VerticalAlignment="Top" Width="486" Height="66" FontSize="36" RenderTransformOrigin="0.525,0.281" Foreground="#FFFFC138" FontFamily="Comic Sans MS"/>
+        <Image Height="285" Canvas.Left="442" Source="/image/John.png" Stretch="Fill" Canvas.Top="154" Width="176" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.231,-0.491"/>
+        <Image Height="285" Canvas.Left="157" Source="/image/Lisa.png" Stretch="Fill" Canvas.Top="154" Width="176"/>
+    </Canvas>
 </Window>
