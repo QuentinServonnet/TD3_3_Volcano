@@ -24,16 +24,26 @@ namespace Volcano
         {
             InitializeComponent();
         }
-        private void BtnLisa_Click(object sender, RoutedEventArgs e)
+
+        private void BtnJouer_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("test Lisa");
-            // suite jeux
+            this.Content = new UCJeux();
         }
 
-        private void BtnJohn_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("test john");
-            // suite jeux
+            UCChoixPersonnage vueRetour = new UCChoixPersonnage();
+
+            // 2. Trouve la fenêtre (Window) qui contient ce UserControl.
+            Window parentWindow = Window.GetWindow(this);
+
+            // Vérification de sécurité
+            if (parentWindow != null)
+            {
+                // 3. Change le contenu de la fenêtre parente pour afficher la vue de retour.
+                parentWindow.Content = vueRetour;
+            }
+
         }
     }
 }
