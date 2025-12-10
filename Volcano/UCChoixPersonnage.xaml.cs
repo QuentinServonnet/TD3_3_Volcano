@@ -24,5 +24,16 @@ namespace Volcano
         {
             InitializeComponent();
         }
+        private void BtnLisa_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("test Lisa");
+            // suite jeux
+        }
+
+        private void BtnJohn_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("test john");
+            // suite jeux
+        }
     }
 }
