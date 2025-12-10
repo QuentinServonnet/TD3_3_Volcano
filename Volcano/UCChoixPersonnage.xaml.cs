@@ -10,14 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Volcano
 {
     /// <summary>
-    /// Logique d'interaction pour UCChoixPersonnage.xaml
+    /// Interaction logic for UCChoixPersonnage.xaml
     /// </summary>
-    public partial class UCChoixPersonnage : Window
+    public partial class UCChoixPersonnage : UserControl
     {
         public UCChoixPersonnage()
         {

@@ -20,5 +20,10 @@ namespace Volcano
         {
             InitializeComponent();
         }
+
+        private void but_jouer_Click(object sender, RoutedEventArgs e)
+        {
+            this.Content = new UCChoixPersonnage();
+        }
     }
 }
