@@ -10,14 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Volcano
 {
     /// <summary>
-    /// Logique d'interaction pour UCJeux.xaml
+    /// Interaction logic for UCJeux.xaml
     /// </summary>
-    public partial class UCJeux : Window
+    public partial class UCJeux : UserControl
     {
         public UCJeux()
         {
