@@ -22,9 +22,6 @@
     <Resource Include="image\image choix personnage.png" />
     <Resource Include="image\image jeu de fond.png" />
     <Resource Include="image\image page accueil.png" />
-    <Resource Include="image\John.png" />
-    <Resource Include="image\Lisa qui court_1.png" />
-    <Resource Include="image\Lisa.png" />
   </ItemGroup>
 
 </Project>
