@@ -13,13 +13,27 @@
         </Canvas.Background>
 
         <Label x:Name="Choix_du_personnage" Content="Choisissez votre personnage" Canvas.Left="157" Canvas.Top="44" Width="486" Height="66" FontSize="36" Foreground="#FFFFC138" FontFamily="Comic Sans MS"/>
+        <Label x:Name="Prenom_John" Content="John" Canvas.Left="232" Canvas.Top="148" Foreground="#FFFFBD2C" HorizontalAlignment="Center" VerticalAlignment="Top" Width="55" FontSize="20"/>
+        <Label x:Name="Prenom_Lisa" Content="Lisa" Canvas.Left="532" Canvas.Top="148" Foreground="#FFFFBD2C" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="BtnJouer" Content="Jouer" Canvas.Left="338" Canvas.Top="388" Foreground="White" Background="#FFFFBD2C" HorizontalAlignment="Left" VerticalAlignment="Center" Width="125" Height="46" RenderTransformOrigin="0.5,0.5">
 
-        <Button x:Name="BtnLisa" Canvas.Left="157" Canvas.Top="154" Width="176" Height="285" Background="Transparent" BorderBrush="Transparent" Click="BtnLisa_Click">
-            <Image Source="/image/Lisa.png" Stretch="Fill"/>
+        </Button>
+        <RadioButton x:Name="John" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="175,190,100,0"  Foreground="White" Height=" 150" Width="150" >
+            <RadioButton.Content>
+                <Image Source="image/John.png" Width="150" Height="150"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="Lisa" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="470,190,100,0"  Foreground="White" Height=" 150" Width="150" >
+            <RadioButton.Content>
+                <Image Source="image/Lisa.png" Width="150" Height="150"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <Button Content="" Canvas.Left="27" Canvas.Top="26" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="67" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" FontSize="22" Height="29">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
         </Button>
 
-        <Button x:Name="BtnJohn" Canvas.Left="442" Canvas.Top="154" Width="176" Height="285" Background="Transparent" BorderBrush="Transparent" Click="BtnJohn_Click">
-            <Image Source="/image/John.png" Stretch="Fill"/>
-        </Button>
+
     </Canvas>
 </UserControl>
