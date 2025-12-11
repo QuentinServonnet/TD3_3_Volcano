@@ -7,10 +7,14 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <Grid RenderTransformOrigin="-1.071,0.57" Margin="0,0,10,0">
+
+
+    <Grid RenderTransformOrigin="-1.248,-0.217" Margin="0,0,10,0">
         <Grid.Background>
             <ImageBrush ImageSource="/image/image choix personnage.png"/>
         </Grid.Background>
+
+
 
 
 
@@ -23,17 +27,18 @@
             </Button.Background>
         </Button>
         <Button x:Name="butjouerjeu" Content="Jouer" Canvas.Left="400" Canvas.Top="350" Margin="0,300,0,0" Width="150" Height="50" Background="#FFFFC138" FontSize="16" FontWeight="Bold" Foreground="White"/>
+        <RadioButton x:Name="John" Margin="157,193,500,124" Foreground="White">
+            <RadioButton.Content>
+                <Image Source="pack://application:,,,/image/John2.0.png" Width="150" Height="150"/>
+            </RadioButton.Content>
+        </RadioButton>
 
-        <RadioButton x:Name="John" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,188,0,0"  Foreground="White" Height=" 150" Width="150" >
+        <RadioButton x:Name="Lina" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="515,176,0,0" Foreground="White" Height="150" Width="150">
             <RadioButton.Content>
-                <Image Source="/image/John2.0.png" Width="150" Height="150"/>
+                <Image Source="pack://application:,,,/image/Lina.png" Width="150" Height="150"/>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton x:Name="Lina" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="515,176,0131,128"  Foreground="White" Height=" 150" Width="150" >
-            <RadioButton.Content>
-                <Image Source="/image/Lina.png" Width="150" Height="150"/>
-            </RadioButton.Content>
-        </RadioButton>
+
 
 
 
