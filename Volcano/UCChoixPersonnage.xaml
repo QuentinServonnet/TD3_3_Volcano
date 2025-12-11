@@ -22,7 +22,7 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button Content="Jouer" Canvas.Left="400" Canvas.Top="350" Margin="0,300,0,0" Width="150" Height="50" Background="#FFFFC138" FontSize="16" FontWeight="Bold" Foreground="White"/>
+        <Button x:Name="butjouerjeu" Content="Jouer" Canvas.Left="400" Canvas.Top="350" Margin="0,300,0,0" Width="150" Height="50" Background="#FFFFC138" FontSize="16" FontWeight="Bold" Foreground="White"/>
 
         <RadioButton x:Name="John" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,188,0,0"  Foreground="White" Height=" 150" Width="150" >
             <RadioButton.Content>
