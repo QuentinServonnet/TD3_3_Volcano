@@ -9,5 +9,5 @@
     <Window.Background>
         <ImageBrush/>
     </Window.Background>
-    <ContentControl x:Name="ZoneJeu"/>
+    <ContentControl x:Name="ZoneJeu" />
 </Window>

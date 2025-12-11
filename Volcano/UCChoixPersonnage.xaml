@@ -18,7 +18,7 @@
                 <Image Source="image/Lina.png" Width="150" Height="150"/>
             </RadioButton.Content>
         </RadioButton>
-        <Button Content="" Canvas.Left="27" Canvas.Top="26" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="67" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" FontSize="22" Height="29" Click="Button_Click">
+        <Button Content="" Canvas.Left="27" Canvas.Top="26" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="67" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" FontSize="22" Height="29">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>

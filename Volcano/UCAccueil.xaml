@@ -10,12 +10,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="/image/image page accueil.png"/>
         </Grid.Background>
-        <Button x:Name="but_jouer" Content="Jouer" Canvas.Left="299" Canvas.Top="256" Height="50" Width="202" Background="#FFFFAD21" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" Margin="0,256,0,0">
+        <Button x:Name="butjouer" Content="Jouer" Canvas.Left="299" Canvas.Top="256" Height="50" Width="202" Background="#FFFFAD21" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" Margin="0,256,0,0">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="but_parametre" Content="Paramètre" Canvas.Left="299" Canvas.Top="335" Height="50" Width="202" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFFFAD21" Foreground="White" Click="but_parametre_Click" Margin="0,344,0,0">
+        <Button x:Name="but_parametre" Content="Paramètre" Canvas.Left="299" Canvas.Top="335" Height="50" Width="202" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFFFAD21" Foreground="White" Margin="0,344,0,0">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

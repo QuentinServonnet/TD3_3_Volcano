@@ -19,9 +19,19 @@ namespace Volcano
         public MainWindow()
         {
             InitializeComponent();
+            AfficheAccueil();
+        }
+        private void AfficheAccueil()
+        {
+            UCAccueil uc = new UCAccueil(); // crée et charge l'écran dedémarrage
+            ZoneJeu.Content = uc; // associe l'écran au conteneur
+            uc.butjouer.Click += AfficherChoixPerso;
         }
 
-        
-
+        private void AfficherChoixPerso(object sender, RoutedEventArgs e)
+        {
+            UCChoixPersonnage uc = new UCChoixPersonnage(); // crée et charge l'écran dedémarrage
+            ZoneJeu.Content = uc; // associe l'écran au conteneur
+        }
     }
 }
