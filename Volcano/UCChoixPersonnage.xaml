@@ -7,43 +7,20 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
 
+    <Grid>
+        <Label x:Name="labConsigne" Content="Choix du personnage" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0" Foreground="White" FontSize="26" FontWeight="Bold"/>
+        <Button x:Name="butjouerjeu" Content="Jouer" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50" FontSize="16" Width="250" Height="50" FontWeight="Bold" IsEnabled="False"/>
 
-
-    <Grid RenderTransformOrigin="-1.248,-0.217" Margin="0,0,10,0">
-        <Grid.Background>
-            <ImageBrush ImageSource="/image/image choix personnage.png"/>
-        </Grid.Background>
-
-
-
-
-
-        <Label x:Name="Choix_du_personnage" Content="Choisissez votre personnage" Canvas.Left="157" Canvas.Top="44" Width="486" Height="66" FontSize="36" Foreground="#FFFFC138" FontFamily="Comic Sans MS" Margin="157,69,157,315"/>
-        <Label x:Name="Prenom_John" Content="John" Canvas.Left="232" Canvas.Top="148" Foreground="#FFFFBD2C" FontSize="20" Margin="212,148,524,270" Width="50" Height="40"/>
-        <Label x:Name="Prenom_Lisa" Content="Lina" Canvas.Left="532" Canvas.Top="148" Foreground="#FFFFBD2C" FontSize="20" Margin="545,140,188,270" Width="50" Height="40"/>
-        <Button Content="" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="67" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" FontSize="22" Height="29">
-            <Button.Background>
-                <ImageBrush/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="butjouerjeu" Content="Jouer" Canvas.Left="400" Canvas.Top="350" Margin="0,300,0,0" Width="150" Height="50" Background="#FFFFC138" FontSize="16" FontWeight="Bold" Foreground="White"/>
-        <RadioButton x:Name="John" Margin="157,193,500,124" Foreground="White">
+        <RadioButton x:Name="rbKayak" Width="150" Height="150" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100,0,0,50">
             <RadioButton.Content>
-                <Image Source="pack://application:,,,/image/John2.0.png" Width="150" Height="150"/>
+                <Image Source="/image/Lina.png" Width="150" Height="150"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="rbTraineau" Width="150" Height="150" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,105,50">
+            <RadioButton.Content>
+                <Image Source="/image/John2.0.png" Width="150" Height="150"/>
             </RadioButton.Content>
         </RadioButton>
-
-        <RadioButton x:Name="Lina" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="515,176,0,0" Foreground="White" Height="150" Width="150">
-            <RadioButton.Content>
-                <Image Source="pack://application:,,,/image/Lina.png" Width="150" Height="150"/>
-            </RadioButton.Content>
-        </RadioButton>
-
-
-
-
-
-
 
     </Grid>
 </UserControl>

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Background>
-        <ImageBrush/>
+        <ImageBrush ImageSource="/image/image jeu de fond.png"/>
     </Window.Background>
     <ContentControl x:Name="ZoneJeu" />
 </Window>

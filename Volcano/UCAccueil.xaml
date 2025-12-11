@@ -7,15 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/image/image page accueil.png"/>
-        </Grid.Background>
-        <Button x:Name="butjouer" Content="Jouer" Canvas.Left="299" Canvas.Top="256" Background="#FFFFAD21" Foreground="White" Margin="266,236,266,120" FontSize="30" Height="90">
+        <Button x:Name="butjouer" Content="Jouer" Canvas.Left="299" Canvas.Top="256" Background="#FFFFAD21" Foreground="White" Margin="266,236,266,120" FontSize="30" Height="50" Width="200">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="butparametre" Content="Paramètre" Canvas.Left="299" Canvas.Top="335" Background="#FFFFAD21" Foreground="White" Margin="266,350,266,10" FontSize="30">
+        <Button x:Name="butparametre" Content="Paramètre" Canvas.Left="299" Canvas.Top="335" Background="#FFFFAD21" Foreground="White" Margin="266,350,266,10" FontSize="30" Width="200" Height="50">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
