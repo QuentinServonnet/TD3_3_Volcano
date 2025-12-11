@@ -20,18 +20,33 @@ namespace Volcano
         {
             InitializeComponent();
             AfficheAccueil();
+            
         }
         private void AfficheAccueil()
         {
             UCAccueil uc = new UCAccueil(); // crée et charge l'écran dedémarrage
             ZoneJeu.Content = uc; // associe l'écran au conteneur
             uc.butjouer.Click += AfficherChoixPerso;
+            uc.butparametre.Click += AfficherParametre;
+        }
+        private void AfficherParametre(object sender, RoutedEventArgs e)
+        {
+            UCParametres uc = new UCParametres(); // crée et charge l'écran dedémarrage
+            ZoneJeu.Content = uc; // associe l'écran au conteneur
         }
 
         private void AfficherChoixPerso(object sender, RoutedEventArgs e)
         {
             UCChoixPersonnage uc = new UCChoixPersonnage(); // crée et charge l'écran dedémarrage
             ZoneJeu.Content = uc; // associe l'écran au conteneur
+            uc.butjouerjeu.Click += afficheJeu;
         }
+      
+        private void afficheJeu(object sender, RoutedEventArgs e)
+        {
+            UCJeux uc = new UCJeux(); // crée et charge l'écran dedémarrage
+            ZoneJeu.Content = uc; // associe l'écran au conteneur
+        }
+
     }
 }
