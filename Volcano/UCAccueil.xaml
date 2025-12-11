@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Volcano.UCAccueil"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Volcano"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/image/image page accueil.png"/>
+        </Grid.Background>
+        <Button x:Name="butjouer" Content="Jouer" Canvas.Left="299" Canvas.Top="256" Background="#FFFFAD21" Foreground="White" Margin="266,236,266,120" FontSize="30" Height="90">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="butparametre" Content="Paramètre" Canvas.Left="299" Canvas.Top="335" Background="#FFFFAD21" Foreground="White" Margin="266,350,266,10" FontSize="30">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</UserControl>

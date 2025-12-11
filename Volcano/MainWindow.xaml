@@ -6,19 +6,8 @@
         xmlns:local="clr-namespace:Volcano"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas>
-        <Canvas.Background>
-            <ImageBrush ImageSource="/image/image page accueil.png"/>
-        </Canvas.Background>
-        <Button x:Name="but_jouer" Content="Jouer" Canvas.Left="299" Canvas.Top="256" Height="50" Width="202" Background="#FFFFAD21" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" Click="but_jouer_Click">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Button x:Name="but_parametre" Content="Paramètre" Canvas.Left="299" Canvas.Top="335" Height="50" Width="202" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFFFAD21" Foreground="White" Click="but_parametre_Click">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-    </Canvas>
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+    <ContentControl x:Name="ZoneJeu" />
 </Window>
