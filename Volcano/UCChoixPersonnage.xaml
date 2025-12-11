@@ -7,22 +7,13 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <Canvas>
-        <Canvas.Background>
-            <ImageBrush ImageSource="/image/image choix personnage.png"/>
-        </Canvas.Background>
+    <Grid>
 
-        <Label x:Name="Choix_du_personnage" Content="Choisissez votre personnage" Canvas.Left="157" Canvas.Top="44" Width="486" Height="66" FontSize="36" Foreground="#FFFFC138" FontFamily="Comic Sans MS"/>
-        <Label x:Name="Prenom_John" Content="John" Canvas.Left="232" Canvas.Top="148" Foreground="#FFFFBD2C" HorizontalAlignment="Center" VerticalAlignment="Top" Width="55" FontSize="20"/>
-        <Label x:Name="Prenom_Lisa" Content="Lina" Canvas.Left="532" Canvas.Top="148" Foreground="#FFFFBD2C" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Button x:Name="BtnJouer" Content="Jouer" Canvas.Left="338" Canvas.Top="369" Foreground="White" Background="#FFFFBD2C" HorizontalAlignment="Center" VerticalAlignment="Top" Width="124" Height="43" RenderTransformOrigin="0.5,0.5" Click="BtnJouer_Click">
-        </Button>
-        <RadioButton x:Name="John" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="175,190,100,0"  Foreground="White" Height=" 150" Width="150" >
-            <RadioButton.Content>
-                <Image Source="image/John2.0.png" Width="150" Height="150"/>
-            </RadioButton.Content>
-        </RadioButton>
-        <RadioButton x:Name="Lisa" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="470,190,100,0"  Foreground="White" Height=" 150" Width="150" >
+
+        <Label x:Name="Choix_du_personnage" Content="Choisissez votre personnage" Canvas.Left="157" Canvas.Top="44" Width="486" Height="66" FontSize="36" Foreground="#FFFFC138" FontFamily="Comic Sans MS" Margin="157,69,157,315"/>
+        <Label x:Name="Prenom_John" Content="John" Canvas.Left="232" Canvas.Top="148" Foreground="#FFFFBD2C" FontSize="20" Margin="212,148,524,270" Width="50" Height="40"/>
+        <Label x:Name="Prenom_Lisa" Content="Lina" Canvas.Left="532" Canvas.Top="148" Foreground="#FFFFBD2C" FontSize="20" Margin="545,140,188,270" Width="50" Height="40"/>
+        <RadioButton x:Name="Lisa" Margin="470,70,100,0"  Foreground="White" Height=" 150" Width="150" >
             <RadioButton.Content>
                 <Image Source="image/Lina.png" Width="150" Height="150"/>
             </RadioButton.Content>
@@ -32,7 +23,13 @@
                 <ImageBrush/>
             </Button.Background>
         </Button>
+        <Button Content="Jouer" Canvas.Left="400" Canvas.Top="350" Margin="0,300,0,0" Width="150" Height="50" Background="#FFFFC138" FontSize="16" FontWeight="Bold" Foreground="White"/>
+        <RadioButton Margin="200,200,200,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <RadioButton.Content>
+                <Image Source="/image/Image_retour.png" Width="150" Height="150"/>
+            </RadioButton.Content>
+        </RadioButton>
 
 
-    </Canvas>
+    </Grid>
 </UserControl>
