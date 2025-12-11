@@ -8,8 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/image/image choix personnage.png"/>
+            <ImageBrush ImageSource="/image/Image Parametre.png"/>
         </Grid.Background>
-        <Label x:Name="Choix_du_personnage" Content="Paramètres" Canvas.Left="157" Canvas.Top="44" Height="66" FontSize="36" Foreground="#FFFFC138" FontFamily="Comic Sans MS" RenderTransformOrigin="0.503,-0.065" Margin="290,38,290,346"/>
     </Grid>
 </UserControl>
