@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace Volcano
 {
     /// <summary>
-    /// Interaction logic for UCChoixPersonnage.xaml
+    /// Logique d'interaction pour UCAccueil.xaml
     /// </summary>
-    public partial class UCChoixPersonnage : UserControl
+    public partial class UCAccueil : UserControl
     {
-        public UCChoixPersonnage()
+        public UCAccueil()
         {
             InitializeComponent();
         }
-
     }
 }

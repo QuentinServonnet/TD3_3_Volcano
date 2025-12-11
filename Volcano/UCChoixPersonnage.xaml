@@ -7,10 +7,10 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <Canvas>
-        <Canvas.Background>
+    <Grid>
+        <Grid.Background>
             <ImageBrush ImageSource="/image/image choix personnage.png"/>
-        </Canvas.Background>
+        </Grid.Background>
 
         <Label x:Name="Choix_du_personnage" Content="Choisissez votre personnage" Canvas.Left="157" Canvas.Top="44" Width="486" Height="66" FontSize="36" Foreground="#FFFFC138" FontFamily="Comic Sans MS"/>
         <Label x:Name="Prenom_John" Content="John" Canvas.Left="232" Canvas.Top="148" Foreground="#FFFFBD2C" HorizontalAlignment="Center" VerticalAlignment="Top" Width="55" FontSize="20"/>
@@ -34,5 +34,5 @@
         </Button>
 
 
-    </Canvas>
+    </Grid>
 </UserControl>

@@ -21,14 +21,7 @@ namespace Volcano
             InitializeComponent();
         }
 
-        private void but_jouer_Click(object sender, RoutedEventArgs e)
-        {
-            this.Content = new UCChoixPersonnage();
-        }
+        
 
-        private void but_parametre_Click(object sender, RoutedEventArgs e)
-        {
-            this.Content = new UCParametres();
-        }
     }
 }
