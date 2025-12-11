@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="image choix personnage.png" />
     <None Remove="image\image choix personnage.png" />
     <None Remove="image\image jeu de fond.png" />
     <None Remove="image\image page accueil.png" />
@@ -37,6 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="image choix personnage.png" />
     <Resource Include="image\image choix personnage.png" />
     <Resource Include="image\image jeu de fond.png" />
     <Resource Include="image\image page accueil.png" />
