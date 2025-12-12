@@ -11,6 +11,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/image choix personnage.png"/>
         </Grid.Background>
+        
         <Label x:Name="labConsigne" Content="Choix du personnage" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0" Foreground="#FFFFC037" FontSize="26" FontWeight="Bold"/>
         <Button x:Name="butjouerjeu" Content="Jouer" Margin="275,334,275,66" FontSize="16" Width="250" Height="50" FontWeight="Bold" Background="#FFFFC037" Foreground="White"/>
 
