@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Volcano
 {
@@ -16,11 +17,14 @@ namespace Volcano
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
             AfficheAccueil();
             
+
+
         }
         private void AfficheAccueil()
         {
@@ -54,5 +58,6 @@ namespace Volcano
             ZoneJeu.Content = uc; // associe l'écran au conteneur
             uc.butjouer.Click += AfficherChoixPerso;
         }
+       
     }
 }
