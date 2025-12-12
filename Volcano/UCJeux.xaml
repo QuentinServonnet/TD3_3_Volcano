@@ -13,8 +13,10 @@
 
         <Canvas x:Name="canvasJeu" Grid.Row="1">
             <Image x:Name="imgfond1" Height="450" Canvas.Left="0"  Canvas.Top="0" Source="/image/image jeu de fond.png" Stretch="Fill" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Image x:Name="imgPerso" Height="142" Canvas.Left="62" Source="/image/Johncourt_1.png" Stretch="Fill" Canvas.Top="214" Width="104" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Image x:Name="imgfond2" Source="/image/image jeu de fond.png" Stretch="Fill" Height="450" Canvas.Left="800" Width="800"/>
+            <Image x:Name="imgPerso" Height="143" Canvas.Left="76" Source="/image/Johncourt_1.png" Stretch="Fill" Canvas.Top="216" Width="104" RenderTransformOrigin="-0.212,0.378" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
+
 
 
     </Grid>

@@ -32,7 +32,7 @@ namespace Volcano
         }
         private void InitializeImages()
         {
-            for (int i = 0; i < persos.Length; i++)
+            for (int i = 0; i < 6; i++)
                 persos[i] = new BitmapImage(new Uri($"pack://application:,,,/image/Johncourt_{i + 1}.png"));
         }
         private void InitializeTimer()
@@ -49,7 +49,8 @@ namespace Volcano
         private void Jeu(object sender, EventArgs e)
         {
             Deplace(imgfond1, 2);
-            
+            Deplace(imgfond2, 2);
+
 
             nb++;
             if (nb == persos.Length * 4)
