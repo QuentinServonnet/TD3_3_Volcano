@@ -11,17 +11,17 @@
             <ImageBrush ImageSource="/image/image page accueil.png"/>
         </Grid.Background>
 
-        <Button x:Name="butjouer" Content="Jouer" Background="#FFFFAD21" Foreground="White" FontSize="30" Height="50" Width="200" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,275,100,0">
+        <Button x:Name="butjouer" Content="Jouer" Background="#FFFFAD21" Foreground="White" FontSize="30" Height="50" Width="200" Margin="300,225,300,175">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        
-        <Button x:Name="butparametre" Content="Paramètre" Background="#FFFFAD21" Foreground="White" FontSize="30" Width="200" Height="50" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,360,100,0">
+
+        <Button x:Name="butparametre" Content="Paramètre" Background="#FFFFAD21" Foreground="White" FontSize="30" Width="200" Height="50" Margin="300,299,300,101">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        
+
     </Grid>
 </UserControl>
