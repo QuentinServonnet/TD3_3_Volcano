@@ -40,6 +40,7 @@ namespace Volcano
             UCChoixPersonnage uc = new UCChoixPersonnage(); // crée et charge l'écran dedémarrage
             ZoneJeu.Content = uc; // associe l'écran au conteneur
             uc.butjouerjeu.Click += afficheJeu;
+            uc.btnretour.Click += AfficheAccueil;
         }
       
         private void afficheJeu(object sender, RoutedEventArgs e)
@@ -47,6 +48,11 @@ namespace Volcano
             UCJeux uc = new UCJeux(); // crée et charge l'écran dedémarrage
             ZoneJeu.Content = uc; // associe l'écran au conteneur
         }
-
+        private void AfficheAccueil(object sender, RoutedEventArgs e)
+        {
+            UCAccueil uc = new UCAccueil(); // crée et charge l'écran dedémarrage
+            ZoneJeu.Content = uc; // associe l'écran au conteneur
+            uc.butjouer.Click += AfficherChoixPerso;
+        }
     }
 }

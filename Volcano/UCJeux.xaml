@@ -10,6 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/image/image jeu de fond.png"/>
         </Grid.Background>
+        <Image Margin="799,0,-799,0" Source="/image/image jeu de fond.png" Stretch="Fill" Width="800" Height="450"/>
 
     </Grid>
 </UserControl>
