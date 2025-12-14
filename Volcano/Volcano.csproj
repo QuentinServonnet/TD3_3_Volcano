@@ -16,6 +16,11 @@
     <None Remove="image\Image Parametre.png" />
     <None Remove="image\image_page_accueil.png" />
     <None Remove="image\Image_retour.png" />
+    <None Remove="image\img_acceuil.png" />
+    <None Remove="image\img_choix_perso.png" />
+    <None Remove="image\img_jeu_fond.png" />
+    <None Remove="image\img_para.png" />
+    <None Remove="image\img_retour.png" />
     <None Remove="image\John qui court grand ensemble.png" />
     <None Remove="image\John saute_1.png" />
     <None Remove="image\John.png" />
@@ -26,6 +31,7 @@
     <None Remove="image\Johncourt_4.png" />
     <None Remove="image\Johncourt_5.png" />
     <None Remove="image\Johncourt_6.png" />
+    <None Remove="image\lave.jpg" />
     <None Remove="image\Lina.png" />
     <None Remove="image\Linacourt_2.png" />
     <None Remove="image\Linacourt_3.png" />
@@ -35,15 +41,15 @@
     <None Remove="image\Lisa qui court grand ensemble.png" />
     <None Remove="image\Lisa qui court_1.png" />
     <None Remove="image\Lisa.png" />
+    <None Remove="image\meteorite.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="image choix personnage.png" />
-    <Resource Include="image\image choix personnage.png" />
-    <Resource Include="image\image jeu de fond.png" />
-    <Resource Include="image\image page accueil.png" />
-    <Resource Include="image\Image Parametre.png" />
-    <Resource Include="image\Image_retour.png" />
+    <Resource Include="image\img_acceuil.png" />
+    <Resource Include="image\img_choix_perso.png" />
+    <Resource Include="image\img_jeu_fond.png" />
+    <Resource Include="image\img_para.png" />
+    <Resource Include="image\img_retour.png" />
     <Resource Include="image\John qui court grand ensemble.png" />
     <Resource Include="image\John saute_1.png" />
     <Resource Include="image\John2.0.png" />
@@ -53,6 +59,7 @@
     <Resource Include="image\Johncourt_4.png" />
     <Resource Include="image\Johncourt_5.png" />
     <Resource Include="image\Johncourt_6.png" />
+    <Resource Include="image\lave.jpg" />
     <Resource Include="image\Lina.png" />
     <Resource Include="image\Linacourt_2.png" />
     <Resource Include="image\Linacourt_3.png" />
@@ -60,6 +67,7 @@
     <Resource Include="image\Linacourt_5.png" />
     <Resource Include="image\Linacourt_6.png" />
     <Resource Include="image\Lisa qui court grand ensemble.png" />
+    <Resource Include="image\meteorite.png" />
   </ItemGroup>
 
 </Project>

@@ -8,20 +8,34 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/image/image page accueil.png"/>
+            <ImageBrush ImageSource="/image/img_acceuil.png" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <Button x:Name="butjouer" Content="Jouer" Background="#FFFFAD21" Foreground="White" FontSize="30" Height="50" Width="200" Margin="300,225,300,175">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
+        <Viewbox Stretch="Uniform">
 
-        <Button x:Name="butparametre" Content="Paramètre" Background="#FFFFAD21" Foreground="White" FontSize="30" Width="200" Height="50" Margin="300,299,300,101">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
+            <StackPanel Width="800" Height="450" VerticalAlignment="Center" HorizontalAlignment="Center">
 
+                <Control Height="225"/>
+
+                <Button x:Name="butjouer" Content="Jouer" 
+                        Background="#FFFFAD21" Foreground="White" 
+                        FontSize="30" Height="50" Width="200" 
+                        HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+
+                <Button x:Name="butparametre" Content="Paramètre" 
+                        Background="#FFFFAD21" Foreground="White" 
+                        FontSize="30" Width="200" Height="50"
+                        HorizontalAlignment="Center">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </UserControl>

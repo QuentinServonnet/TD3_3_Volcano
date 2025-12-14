@@ -6,9 +6,88 @@
              xmlns:local="clr-namespace:Volcano"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/image/Image Parametre.png"/>
+            <ImageBrush ImageSource="/image/img_para.png" Stretch="UniformToFill"/>
         </Grid.Background>
+
+        <Rectangle Fill="#99000000"/>
+
+        <Viewbox Stretch="Uniform">
+            <Grid Width="800" Height="450">
+
+                <Button x:Name="btnRetour" Content="&#xE72B;" 
+                        FontFamily="Segoe MDL2 Assets" 
+                        FontSize="30" FontWeight="Bold"
+                        Foreground="White" Background="Transparent" 
+                        BorderBrush="Transparent" Cursor="Hand"
+                        HorizontalAlignment="Left" VerticalAlignment="Top" 
+                        Margin="20,20,0,0" Width="50" Height="50">
+                    <Button.Effect>
+                        <DropShadowEffect BlurRadius="5" ShadowDepth="2"/>
+                    </Button.Effect>
+                </Button>
+
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                    <Label Content="PARAMÈTRES" 
+                           Foreground="#FFFFC037" FontSize="50" FontWeight="Bold" 
+                           HorizontalAlignment="Center" Margin="0,0,0,50">
+                        <Label.Effect>
+                            <DropShadowEffect BlurRadius="10" ShadowDepth="5" Color="Black"/>
+                        </Label.Effect>
+                    </Label>
+
+                    <Grid Margin="0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="300"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Content="MUSIQUE" Foreground="White" 
+                               FontSize="24" FontWeight="Bold" VerticalAlignment="Center"/>
+
+                        <Slider Grid.Column="1" x:Name="sliderMusique" 
+                                Minimum="0" Maximum="100" Value="50" 
+                                TickFrequency="10" IsSnapToTickEnabled="True"
+                                VerticalAlignment="Center"/>
+                    </Grid>
+
+                    <Grid Margin="0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="300"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Content="EFFETS" Foreground="White" 
+                               FontSize="24" FontWeight="Bold" VerticalAlignment="Center"/>
+
+                        <Slider Grid.Column="1" x:Name="sliderSon" 
+                                Minimum="0" Maximum="100" Value="80" 
+                                TickFrequency="10" IsSnapToTickEnabled="True"
+                                VerticalAlignment="Center"/>
+                    </Grid>
+
+                    <Grid Margin="0,20,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="300"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Content="DIFFICULTÉ" Foreground="White" 
+                               FontSize="24" FontWeight="Bold" VerticalAlignment="Center"/>
+
+                        <ComboBox Grid.Column="1" FontSize="18" FontWeight="Bold" Height="35">
+                            <ComboBoxItem Content="Facile"/>
+                            <ComboBoxItem Content="Normal" IsSelected="True"/>
+                            <ComboBoxItem Content="Difficile"/>
+                            <ComboBoxItem Content="Enfer"/>
+                        </ComboBox>
+                    </Grid>
+
+                </StackPanel>
+            </Grid>
+        </Viewbox>
     </Grid>
 </UserControl>

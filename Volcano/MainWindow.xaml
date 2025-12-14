@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Volcano"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="800" MinHeight="550" MinWidth="800">
+        Title="Volcano" Height="550" Width="800" MinHeight="550" MinWidth="800">
+
     <Window.Background>
-        <ImageBrush ImageSource="/image/image jeu de fond.png"/>
+        <ImageBrush ImageSource="/image/img_jeu_fond.png"/>
     </Window.Background>
-    <ContentControl x:Name="ZoneJeu" />
+
+    <Grid>
+        <ContentControl x:Name="ZoneJeu" />
+
+        <local:UCEchap x:Name="overlayPause" Visibility="Collapsed"/>
+    </Grid>
 </Window>

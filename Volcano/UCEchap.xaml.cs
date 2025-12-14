@@ -1,28 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System; // Indispensable
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Volcano
 {
-    /// <summary>
-    /// Logique d'interaction pour UCEchap.xaml
-    /// </summary>
     public partial class UCEchap : UserControl
     {
+        public event EventHandler DemandeReprise;
+        public event EventHandler DemandeQuitter;
+
         public UCEchap()
         {
             InitializeComponent();
+        }
+
+        private void btnReprendre_Click(object sender, RoutedEventArgs e)
+        {
+            if (DemandeReprise != null)
+            {
+                DemandeReprise(this, EventArgs.Empty);
+            }
+        }
+
+        private void btnQuitter_Click(object sender, RoutedEventArgs e)
+        {
+            if (DemandeQuitter != null)
+            {
+                DemandeQuitter(this, EventArgs.Empty);
+            }
         }
     }
 }

@@ -17,13 +17,18 @@ namespace Volcano
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
         public MainWindow()
         {
             InitializeComponent();
-            AfficheAccueil();
-            
 
+            this.KeyDown += Window_KeyDown;
+
+            //  gere les bouton menu echap
+            overlayPause.DemandeReprise += (s, e) => ReprendreJeu();
+            overlayPause.DemandeQuitter += (s, e) => QuitterJeu();
+
+            AfficheAccueil();
 
         }
         private void AfficheAccueil()
@@ -46,7 +51,7 @@ namespace Volcano
             uc.butjouerjeu.Click += afficheJeu;
             uc.btnretour.Click += AfficheAccueil;
         }
-      
+
         private void afficheJeu(object sender, RoutedEventArgs e)
         {
             UCJeux uc = new UCJeux(); // crée et charge l'écran dedémarrage
@@ -58,6 +63,44 @@ namespace Volcano
             ZoneJeu.Content = uc; // associe l'écran au conteneur
             uc.butjouer.Click += AfficherChoixPerso;
         }
-       
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            // si echap
+            if (e.Key == Key.Escape)
+            {
+                // si le joueur joue
+                if (ZoneJeu.Content is UCJeux jeuEnCours)
+                {
+                    // on stop le temps
+                    jeuEnCours.MettreEnPause();
+
+                    // on affiche le menu pause
+                    overlayPause.Visibility = Visibility.Visible;
+                }
+            }
+        }
+
+        private void ReprendreJeu()
+        {
+            // on cache le menu
+            overlayPause.Visibility = Visibility.Collapsed;
+
+            // on relance le timer du jeu
+            if (ZoneJeu.Content is UCJeux jeuEnCours)
+            {
+                jeuEnCours.Reprendre();
+            }
+
+            // pour faire marcher les touches ...
+            this.Focus();
+        }
+
+        private void QuitterJeu()
+        {
+            overlayPause.Visibility = Visibility.Collapsed;
+            AfficheAccueil(); // retour menu
+        }
+
     }
 }
