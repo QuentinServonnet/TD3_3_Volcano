@@ -19,7 +19,6 @@
     <None Remove="image\img_acceuil.png" />
     <None Remove="image\img_choix_perso.png" />
     <None Remove="image\img_jeu_fond.png" />
-    <None Remove="image\img_para.png" />
     <None Remove="image\img_retour.png" />
     <None Remove="image\John qui court grand ensemble.png" />
     <None Remove="image\John saute_1.png" />
@@ -48,7 +47,6 @@
     <Resource Include="image\img_acceuil.png" />
     <Resource Include="image\img_choix_perso.png" />
     <Resource Include="image\img_jeu_fond.png" />
-    <Resource Include="image\img_para.png" />
     <Resource Include="image\img_retour.png" />
     <Resource Include="image\John qui court grand ensemble.png" />
     <Resource Include="image\John saute_1.png" />

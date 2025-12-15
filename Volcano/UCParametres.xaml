@@ -9,7 +9,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/image/img_para.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/image/image_parametre.png" Stretch="UniformToFill"/>
         </Grid.Background>
 
         <Rectangle Fill="#99000000"/>
