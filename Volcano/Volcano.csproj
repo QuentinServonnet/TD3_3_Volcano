@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="image choix personnage.png" />
+    <None Remove="image\fond_jeu.png" />
     <None Remove="image\image choix personnage.png" />
     <None Remove="image\image jeu de fond.png" />
     <None Remove="image\image page accueil.png" />
@@ -41,6 +42,10 @@
     <None Remove="image\Lisa qui court_1.png" />
     <None Remove="image\Lisa.png" />
     <None Remove="image\meteorite.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\fond_jeu.png" />
   </ItemGroup>
 
   <ItemGroup>

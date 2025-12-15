@@ -13,14 +13,14 @@
             <Grid Width="800" Height="450">
                 <Canvas x:Name="canvasJeu" ClipToBounds="True">
 
-                    <Image x:Name="imgfond1" Source="/image/img_jeu_fond.png" 
+                    <Image x:Name="imgfond1" Source="/image/fond_jeu.png" 
                            Width="800" Height="450" Stretch="Fill" Canvas.Left="0"/>
-                    <Image x:Name="imgfond2" Source="/image/img_jeu_fond.png" 
+                    <Image x:Name="imgfond2" Source="/image/fond_jeu.png" 
                            Width="800" Height="450" Stretch="Fill" Canvas.Left="800"/>
 
                     <Image x:Name="imgPerso" Source="/image/Johncourt_1.png" 
                            Width="87" Height="107" Stretch="Fill"
-                           Canvas.Left="346" Canvas.Top="246"
+                           Canvas.Left="337" Canvas.Top="333"
                            RenderTransformOrigin="0.5,0.5"/>
 
                     <Image x:Name="img_lave" Source="/image/lave.jpg" 
