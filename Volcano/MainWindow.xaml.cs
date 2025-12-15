@@ -42,6 +42,7 @@ namespace Volcano
         {
             UCParametres uc = new UCParametres(); // crée et charge l'écran dedémarrage
             ZoneJeu.Content = uc; // associe l'écran au conteneur
+            uc.btnRetour.Click += AfficheAccueil;
         }
 
         private void AfficherChoixPerso(object sender, RoutedEventArgs e)
@@ -62,7 +63,9 @@ namespace Volcano
             UCAccueil uc = new UCAccueil(); // crée et charge l'écran dedémarrage
             ZoneJeu.Content = uc; // associe l'écran au conteneur
             uc.butjouer.Click += AfficherChoixPerso;
+            uc.butparametre.Click += AfficherParametre;
         }
+
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
