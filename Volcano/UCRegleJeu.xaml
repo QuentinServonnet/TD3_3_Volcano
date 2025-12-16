@@ -11,16 +11,7 @@
             <ImageBrush ImageSource="/image/img_choix_perso.png"/>
         </Grid.Background>
         <Label x:Name="Titre_Regle" Content="Regle du jeu" HorizontalAlignment="Center" Margin="0,50,0,331" Width="232" FontSize="36" Foreground="#FFFEC259" RenderTransformOrigin="0.514,-0.078" FontFamily="Segoe UI" FontWeight="Bold"/>
-        <Label x:Name="Regle" Content="Dans ce jeu, le joueur contrôle un personnage qui doit courir dans un paysage volcanique tout en évitant des obstacles comme des météorites qui tombent du ciel et la lave qui monte lentement. Le but est de rester en vie le plus longtemps possible. Le joueur doit éviter les météorites qui tombent et éviter de se faire rattraper par la lave. Plus le temps passe, plus la lave monte rapidement, augmentant la difficulté. Le jeu se termine si le personnage est touché par une météorite ou submergé par la lave." HorizontalAlignment="Left" Margin="-7,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="127" Foreground="White" FontSize="20">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-7.608"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-1.734"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
+        <Label x:Name="Regle" Content="Dans ce jeu, le joueur contrôle un personnage qui doit courir dans un paysage volcanique tout en évitant des obstacles comme des météorites qui tombent du ciel et la lave qui monte lentement. Le but est de rester en vie le plus longtemps possible. Le joueur doit éviter les météorites qui tombent et éviter de se faire rattraper par la lave. Plus le temps passe, plus la lave monte rapidement, augmentant la difficulté. Le jeu se termine si le personnage est touché par une météorite ou submergé par la lave." HorizontalAlignment="Center" Margin="0,192,0,0" VerticalAlignment="Top" Height="207" Width="539" FontSize="22"/>
 
 
     </Grid>
