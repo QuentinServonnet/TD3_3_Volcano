@@ -339,9 +339,7 @@ namespace Volcano
         private void InitSon()
         {
             win = new SoundPlayer(Application.GetResourceStream(
-
-           new Uri("/Sons/WinSound.wav", UriKind.Relative)).Stream);
-
+                new Uri("Son_Jeu.wav", UriKind.Relative)).Stream);
         }
 
     }
