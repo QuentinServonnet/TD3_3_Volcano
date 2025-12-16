@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Media;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -44,6 +45,9 @@ namespace Volcano
         private int puissanceSaut = 22;
         private double sol; // La ligne de sol
 
+        //Son
+        private static SoundPlayer son;
+
         // CONSTRUCTEUR
 
         public UCJeux(string personnageChoisi = "John")
@@ -56,7 +60,8 @@ namespace Volcano
 
             tempsJeu = TimeSpan.Zero; // reset du chrono
 
-            this.Loaded += (s, e) => {
+            this.Loaded += (s, e) =>
+            {
                 if (Window.GetWindow(this) != null)
                 {
                     Window.GetWindow(this).KeyDown += Window_KeyDown;

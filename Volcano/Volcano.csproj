@@ -75,4 +75,10 @@
     <Resource Include="image\meteorite.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Assets\son JEU.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
