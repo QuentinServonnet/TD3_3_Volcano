@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Media;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,10 +18,12 @@ namespace Volcano
     /// </summary>
     public partial class MainWindow : Window
     {
+        private SoundPlayer son;
 
         public MainWindow()
         {
             InitializeComponent();
+
 
             this.KeyDown += Window_KeyDown;
 
@@ -104,8 +107,21 @@ namespace Volcano
             overlayPause.Visibility = Visibility.Collapsed;
             AfficheAccueil(); // retour menu
         }
+        private static MediaPlayer musique;
+        private void InitMusique()
+        {
+            musique = new MediaPlayer();
+            musique.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "son JEU.mp3"));
+            musique.MediaEnded += RelanceMusique;
+            musique.Volume = 0.5;
+            musique.Play();
+        }
 
-        
+        private void RelanceMusique(object? sender, EventArgs e)
+        {
+            musique.Position = TimeSpan.Zero;
+            musique.Play();
+        }
 
     }
 }

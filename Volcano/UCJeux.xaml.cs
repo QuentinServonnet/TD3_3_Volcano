@@ -46,7 +46,7 @@ namespace Volcano
         private double sol; // La ligne de sol
 
         //Son
-        private static SoundPlayer win;
+        private static SoundPlayer son;
 
         // CONSTRUCTEUR
 
@@ -334,13 +334,5 @@ namespace Volcano
         {
             if (!minuterie.IsEnabled && !estGameOver) minuterie.Start();
         }
-
-
-        private void InitSon()
-        {
-            win = new SoundPlayer(Application.GetResourceStream(
-                new Uri("Son_Jeu.wav", UriKind.Relative)).Stream);
-        }
-
     }
 }
