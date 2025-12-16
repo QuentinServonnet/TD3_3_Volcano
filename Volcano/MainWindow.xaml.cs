@@ -55,6 +55,13 @@ namespace Volcano
             ZoneJeu.Content = uc; // associe l'écran au conteneur
             uc.butjouerjeu.Click += afficheJeu;
             uc.btnretour.Click += AfficheAccueil;
+            uc.butreglejeu.Click += AfficherRegleJeu;
+        }
+        private void AfficherRegleJeu(object sender, RoutedEventArgs e)
+        {
+            UCRegleJeu uc = new UCRegleJeu(); // crée et charge l'écran dedémarrage
+            ZoneJeu.Content = uc; // associe l'écran au conteneur
+            uc.btnretourregle.Click += AfficherChoixPerso;
         }
 
         private void afficheJeu(object sender, RoutedEventArgs e)
