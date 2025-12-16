@@ -25,7 +25,7 @@
 
                     <Image x:Name="img_lave" Source="/image/lave.jpg" 
                            Width="250" Height="150" Stretch="Fill"
-                           Canvas.Left="-250" Canvas.Top="246"/>
+                           Canvas.Left="-250" Canvas.Top="300"/>
 
                     <Label x:Name="lblTemps" Content="0 s" 
                            Canvas.Left="350" Canvas.Top="10" 
