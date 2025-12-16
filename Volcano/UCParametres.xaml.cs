@@ -33,7 +33,7 @@ namespace Volcano
                 // Charger un fichier audio (WAV, MP3, etc.)
                 _player.Open(new Uri("Assets/musique.mp3", UriKind.Relative));
 
-                // Volume initial (0.0 = muet, 1.0 = maximum)
+                // Volume initial (0.0 = muet, 1.0 = maximum)t
                 _player.Volume = 0.5;
 
                 // Lecture en boucle
