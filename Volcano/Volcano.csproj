@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\son JEU.mp3" />
     <None Remove="image choix personnage.png" />
     <None Remove="image\fond_jeu.png" />
     <None Remove="image\fond_parametre.png" />
@@ -47,7 +46,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\son JEU.mp3" />
     <Resource Include="image\fond_jeu.png" />
     <Resource Include="image\fond_parametre.png" />
   </ItemGroup>
@@ -75,6 +73,12 @@
     <Resource Include="image\Linacourt_6.png" />
     <Resource Include="image\Lisa qui court grand ensemble.png" />
     <Resource Include="image\meteorite.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\son JEU.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

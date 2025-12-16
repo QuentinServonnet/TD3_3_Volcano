@@ -23,6 +23,7 @@ namespace Volcano
         public MainWindow()
         {
             InitializeComponent();
+            InitMusique();
 
 
             this.KeyDown += Window_KeyDown;
@@ -107,11 +108,11 @@ namespace Volcano
             overlayPause.Visibility = Visibility.Collapsed;
             AfficheAccueil(); // retour menu
         }
-        private static MediaPlayer musique;
+        private static MediaPlayer? musique;
         private void InitMusique()
         {
             musique = new MediaPlayer();
-            musique.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "son JEU.mp3"));
+            musique.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Assets/son JEU.mp3"));
             musique.MediaEnded += RelanceMusique;
             musique.Volume = 0.5;
             musique.Play();
