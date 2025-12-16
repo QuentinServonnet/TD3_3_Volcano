@@ -29,7 +29,16 @@
                 <Button x:Name="butparametre" Content="Paramètre" 
                         Background="#FFFFAD21" Foreground="White" 
                         FontSize="30" Width="200" Height="50"
-                        HorizontalAlignment="Center">
+                        HorizontalAlignment="Center"  Margin="0,0,0,20">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+                
+                <Button x:Name="butquitter" Content="Quitter" 
+                    Background="#FFFFAD21" Foreground="White" 
+                    FontSize="30" Width="200" Height="50"
+                    HorizontalAlignment="Center" Click="butquitter_Click">
                     <Button.Effect>
                         <DropShadowEffect/>
                     </Button.Effect>

@@ -24,5 +24,10 @@ namespace Volcano
         {
             InitializeComponent();
         }
+
+        private void butquitter_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
