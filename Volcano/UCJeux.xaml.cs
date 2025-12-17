@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Media;
 using System.Printing;
 using System.Windows;
 using System.Windows.Controls;
@@ -53,6 +54,11 @@ namespace Volcano
         private int gravite = 1;
         private int puissanceSaut = 16;
         private double sol;
+        //son 
+        private static SoundPlayer mort;
+        private static SoundPlayer saut;
+
+
 
         public UCJeux(string personnageChoisi = "John", string niveauDifficulte = "Normal")
         {
@@ -63,7 +69,8 @@ namespace Volcano
             ConfigurerDifficulte(niveauDifficulte);
 
             InitializeImages();// charge les images du perso
-            InitializeTimer();  // lance la boucle de jeu
+            InitializeTimer();
+            InitSon();// lance la boucle de jeu
 
             tempsJeu = TimeSpan.Zero;// reset du chrono
             lblTemps.Content = "00:00";
@@ -129,6 +136,7 @@ namespace Volcano
             if ((e.Key == Key.Z || e.Key == Key.Space) && !estEnSaut)
             {
                 estEnSaut = true;
+                saut.Play();
                 force = -puissanceSaut;
             }
         }
@@ -348,6 +356,7 @@ namespace Volcano
         {
             estGameOver = true;
             minuterie.Stop();
+            mort.Play();
             overlayPerdu.SetInfos(message, lblTemps.Content.ToString());
             overlayPerdu.Visibility = Visibility.Visible;
         }
@@ -440,5 +449,20 @@ namespace Volcano
                 minuterie.Start();
             }
         }
+        private void InitSon()
+        {
+            mort = new SoundPlayer(Application.GetResourceStream(
+            new Uri("Assets/Game-over.wav", UriKind.Relative)).Stream);
+
+            saut = new SoundPlayer(Application.GetResourceStream(
+            new Uri("Assets/Jump.wav", UriKind.Relative)).Stream);
+        }
+
+
+
+
+
+
+
     }
 }

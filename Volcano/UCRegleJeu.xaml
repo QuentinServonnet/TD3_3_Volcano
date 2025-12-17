@@ -11,7 +11,7 @@
             <ImageBrush ImageSource="/image/img_choix_perso.png"/>
         </Grid.Background>
         <Label x:Name="Titre_Regle" Content="Regle du jeu" HorizontalAlignment="Center" Margin="0,50,0,331" Width="232" FontSize="36" Foreground="#FFFEC259" RenderTransformOrigin="0.514,-0.078" FontFamily="Segoe UI" FontWeight="Bold"/>
-        <Label x:Name="Regle" Content="Le joueur contrôle un personnage qui court dans un paysage &#xD;&#xA;volcanique, évitant des météorites et la lave qui le poursuit.&#xD;&#xA; L'objectif est de survivre le plus longtemps possible. Plus le&#xD;&#xA; temps passe, plus la lave accélère. Le jeu se termine si le &#xD;&#xA;personnage est touché par une météorite ou rattrapé par la lave.&#xD;&#xA;" Margin="58,124,58,45" FontSize="22" RenderTransformOrigin="0.5,0.347" Foreground="#FFFEC259" FontWeight="Bold"/>
+        <Label x:Name="Regle" Content="Le joueur contrôle un personnage qui court dans un paysage &#xD;&#xA;volcanique, évitant des météorites et la lave qui le poursuit.&#xD;&#xA; L'objectif est de survivre le plus longtemps possible. Plus le&#xD;&#xA; temps passe, plus la lave accélère. Le jeu se termine si le &#xD;&#xA;personnage est touché par une météorite ou rattrapé par la lave.&#xD;&#xA;" Margin="58,124,58,45" FontSize="22" RenderTransformOrigin="0.5,0.347" Foreground="#FFFEC259" FontWeight="Bold" HorizontalAlignment="Center"/>
         <Button x:Name="btnretourregle" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe MDL2 Assets" Foreground="White" Height="35" Width="54" FontSize="20">
             <Button.Background>
                 <ImageBrush/>
