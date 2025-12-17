@@ -205,7 +205,6 @@ namespace Volcano
 
         private void GererMeteorites()
         {
-            // Utilisation de la variable 'frequenceMeteorite' définie par la difficulté
             if (generateurAleatoire.Next(0, frequenceMeteorite) == 0)
             {
                 if (textureMeteorite != null)
@@ -213,7 +212,7 @@ namespace Volcano
                     Image m = new Image();
                     m.Source = textureMeteorite;
                     m.Width = 50; m.Height = 50; m.Stretch = Stretch.Fill;
-                    // Position x aléatoire
+                    // position x aléatoire
                     Canvas.SetLeft(m, generateurAleatoire.Next(200, 800));
                     Canvas.SetTop(m, -60);
 
