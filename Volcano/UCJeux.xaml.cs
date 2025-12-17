@@ -278,20 +278,50 @@ namespace Volcano
 
         private void VerifierCollisions()
         {
-            Rect playerHitBox = new Rect(Canvas.GetLeft(imgPerso), Canvas.GetTop(imgPerso), imgPerso.Width - 15, imgPerso.Height);
-            Rect lavaHitBox = new Rect(Canvas.GetLeft(img_lave) + 20, Canvas.GetTop(img_lave), img_lave.Width - 20, img_lave.Height);
+            // 1) Tailles fiables : en WPF, ActualWidth/ActualHeight sont plus sûrs que Width/Height
+            double pW = (imgPerso.ActualWidth > 0) ? imgPerso.ActualWidth : imgPerso.Width;
+            double pH = (imgPerso.ActualHeight > 0) ? imgPerso.ActualHeight : imgPerso.Height;
+
+            double lW = (img_lave.ActualWidth > 0) ? img_lave.ActualWidth : img_lave.Width;
+            double lH = (img_lave.ActualHeight > 0) ? img_lave.ActualHeight : img_lave.Height;
+
+            // 2) Hitbox joueur : même idée que ton "-15" mais mieux (on serre aussi un peu en haut/bas)
+            Rect playerHitBox = new Rect(
+                Canvas.GetLeft(imgPerso) + 12,                 // marge gauche
+                Canvas.GetTop(imgPerso) + 8,                   // marge haut
+                Math.Max(1, pW - 24 - 15),                      // largeur réduite (ton -15 + marge gauche/droite)
+                Math.Max(1, pH - 12)                            // hauteur légèrement réduite
+            );
+
+            // 3) Hitbox lave : même idée que ton "+20" mais avec bords serrés à gauche ET à droite
+            Rect lavaHitBox = new Rect(
+                Canvas.GetLeft(img_lave) + 25,                 // marge gauche (proche de ton +20)
+                Canvas.GetTop(img_lave) + 8,                   // marge haut (surface dangereuse)
+                Math.Max(1, lW - 50),                          // on enlève 25px de chaque côté
+                Math.Max(1, lH - 8)                            // un peu moins en haut
+            );
 
             if (playerHitBox.IntersectsWith(lavaHitBox))
             {
-                // collision lave
                 GameOver("VOUS AVEZ ETE AVALER PAR LA LAVE !");
                 return;
             }
 
+            // 4) Météorites : hitbox un peu plus "ronde" (on réduit 25% tout autour)
             foreach (Image m in meteorites)
             {
-                // collision meteorite
-                Rect meteorHitBox = new Rect(Canvas.GetLeft(m), Canvas.GetTop(m), m.Width, m.Height);
+                double mW = (m.ActualWidth > 0) ? m.ActualWidth : m.Width;
+                double mH = (m.ActualHeight > 0) ? m.ActualHeight : m.Height;
+
+                double pad = Math.Min(mW, mH) * 0.25;
+
+                Rect meteorHitBox = new Rect(
+                    Canvas.GetLeft(m) + pad,
+                    Canvas.GetTop(m) + pad,
+                    Math.Max(1, mW - 2 * pad),
+                    Math.Max(1, mH - 2 * pad)
+                );
+
                 if (playerHitBox.IntersectsWith(meteorHitBox))
                 {
                     GameOver("UNE METEORITE VOUS A ECRASE !");
@@ -299,10 +329,19 @@ namespace Volcano
                 }
             }
 
+            // 5) Obstacles : léger serrage (évite collision "fantôme")
             foreach (Image obs in obstacles)
             {
-                //collision pieges
-                Rect obstacleHitBox = new Rect(Canvas.GetLeft(obs), Canvas.GetTop(obs), obs.Width, obs.Height);
+                double oW = (obs.ActualWidth > 0) ? obs.ActualWidth : obs.Width;
+                double oH = (obs.ActualHeight > 0) ? obs.ActualHeight : obs.Height;
+
+                Rect obstacleHitBox = new Rect(
+                    Canvas.GetLeft(obs) + 6,
+                    Canvas.GetTop(obs) + 6,
+                    Math.Max(1, oW - 12),
+                    Math.Max(1, oH - 8)
+                );
+
                 if (playerHitBox.IntersectsWith(obstacleHitBox))
                 {
                     GameOver("VOUS AVEZ HEURTE UN OBSTACLE !");
@@ -310,6 +349,7 @@ namespace Volcano
                 }
             }
         }
+
 
         //LOGIQUE DECOR ET ANIMATION 
 
@@ -399,23 +439,37 @@ namespace Volcano
                 textureObstacle.Freeze();
 
             string prefix = (nomPersonnage == "Lina") ? "Lina_" : "Johncourt_";
+
             for (int i = 0; i < persos.Length; i++)
             {
+                // On tente d'abord les sprites animés (ex: Lina_1.png)
+                string framePath = $"pack://application:,,,/image/{prefix}{i + 1}.png";
+
+                try
+                {
                     persos[i] = new BitmapImage();
                     persos[i].BeginInit();
-                    persos[i].UriSource = new Uri($"pack://application:,,,/image/{prefix}{i + 1}.png");
+                    persos[i].UriSource = new Uri(framePath);
                     persos[i].CacheOption = BitmapCacheOption.OnLoad;
                     persos[i].EndInit();
                     persos[i].Freeze();
+                }
+                catch
                 {
-                    if (nomPersonnage == "Lina")
-                    {
-                        persos[i] = new BitmapImage(new Uri("pack://application:,,,/image/Lina.png"));
-                    }
+                    // Fallback : si la frame n'existe pas, on charge une image fixe
+                    // (utile si tu n'as que Lina.png et pas Lina_1..6)
+                    string fallback = (nomPersonnage == "Lina")
+                        ? "pack://application:,,,/image/Lina.png"
+                        : "pack://application:,,,/image/Johncourt_1.png";
+
+                    persos[i] = new BitmapImage(new Uri(fallback));
+                    persos[i].Freeze();
                 }
             }
 
-            if (persos.Length > 0 && persos[0] != null) imgPerso.Source = persos[0];
+            if (persos.Length > 0 && persos[0] != null)
+                imgPerso.Source = persos[0];
+
         }
 
         private void InitializeTimer()
