@@ -33,6 +33,7 @@
     <None Remove="image\Johncourt_5.png" />
     <None Remove="image\Johncourt_6.png" />
     <None Remove="image\lave.jpg" />
+    <None Remove="image\lave.png" />
     <None Remove="image\Lina.png" />
     <None Remove="image\Linacourt_2.png" />
     <None Remove="image\Linacourt_3.png" />
@@ -43,6 +44,7 @@
     <None Remove="image\Lisa qui court_1.png" />
     <None Remove="image\Lisa.png" />
     <None Remove="image\meteorite.png" />
+    <None Remove="image\obstacle.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,7 +66,7 @@
     <Resource Include="image\Johncourt_4.png" />
     <Resource Include="image\Johncourt_5.png" />
     <Resource Include="image\Johncourt_6.png" />
-    <Resource Include="image\lave.jpg" />
+    <Resource Include="image\lave.png" />
     <Resource Include="image\Lina.png" />
     <Resource Include="image\Linacourt_2.png" />
     <Resource Include="image\Linacourt_3.png" />
@@ -73,6 +75,7 @@
     <Resource Include="image\Linacourt_6.png" />
     <Resource Include="image\Lisa qui court grand ensemble.png" />
     <Resource Include="image\meteorite.png" />
+    <Resource Include="image\obstacle.jpg" />
   </ItemGroup>
 
   <ItemGroup>

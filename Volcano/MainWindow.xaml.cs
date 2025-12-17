@@ -18,6 +18,8 @@ namespace Volcano
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string NiveauDifficulte = "Normal";
+
         private SoundPlayer son;
 
         public MainWindow()
@@ -66,9 +68,21 @@ namespace Volcano
 
         private void afficheJeu(object sender, RoutedEventArgs e)
         {
-            UCJeux uc = new UCJeux(); // crée et charge l'écran dedémarrage
-            ZoneJeu.Content = uc; // associe l'écran au conteneur
+            string persoChoisi = "John";
+
+            if (ZoneJeu.Content is UCChoixPersonnage ecranChoix)
+            {
+                persoChoisi = ecranChoix.GetPersonnageSelectionne();
+            }
+
+            UCJeux uc = new UCJeux(persoChoisi, NiveauDifficulte);
+            ZoneJeu.Content = uc;
+
+            uc.Focus();
+
+
         }
+
         private void AfficheAccueil(object sender, RoutedEventArgs e)
         {
             UCAccueil uc = new UCAccueil(); // crée et charge l'écran dedémarrage

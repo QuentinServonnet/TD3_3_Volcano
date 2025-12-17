@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Volcano
 {
-    /// <summary>
-    /// Interaction logic for UCChoixPersonnage.xaml
-    /// </summary>
     public partial class UCChoixPersonnage : UserControl
     {
         public UCChoixPersonnage()
@@ -25,5 +22,13 @@ namespace Volcano
             InitializeComponent();
         }
 
+        public string GetPersonnageSelectionne()
+        {
+            if (Lina.IsChecked == true)
+            {
+                return "Lina";
+            }
+            return "John";
+        }
     }
 }

@@ -23,9 +23,8 @@
                            Canvas.Left="337" Canvas.Top="333"
                            RenderTransformOrigin="0.5,0.5"/>
 
-                    <Image x:Name="img_lave" Source="/image/lave.jpg" 
-                           Width="350" Height="150" Stretch="Fill"
-                           Canvas.Left="-352" Canvas.Top="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Image x:Name="img_lave" Source="/image/lave.png" 
+                           Width="537" Height="302" Stretch="Fill" Canvas.Top="225" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-537"/>
 
                     <Label x:Name="lblTemps" Content="0 s" 
                            Canvas.Left="350" Canvas.Top="10" 

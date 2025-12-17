@@ -92,7 +92,7 @@
                         FontSize="16" FontWeight="Bold" 
                         Width="160" Height="50" 
                         Background="#FFFFC037" Foreground="White"
-                        HorizontalAlignment="Center" Margin="0,0,350,40">
+                        HorizontalAlignment="Center" Margin="350,0,0,40">
                     <Button.Effect>
                         <DropShadowEffect/>
                     </Button.Effect>
@@ -102,7 +102,7 @@
                         FontSize="16" FontWeight="Bold" 
                         Width="160" Height="50" 
                         Background="#FFFFC037" Foreground="White"
-                        HorizontalAlignment="Center" Margin="350,0,0,40">
+                        HorizontalAlignment="Center" Margin="0,0,350,40">
                     <Button.Effect>
                         <DropShadowEffect/>
                     </Button.Effect>

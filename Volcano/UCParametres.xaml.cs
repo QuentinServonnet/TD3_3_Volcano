@@ -25,33 +25,34 @@ namespace Volcano
         public UCParametres()
         {
             InitializeComponent();
-            // Initialisation du lecteur 
             _player = new MediaPlayer();
 
-            try
-            {
-                // Charger un fichier audio (WAV, MP3, etc.)
-                _player.Open(new Uri("Assets/musique.mp3", UriKind.Relative));
+            _player.Open(new Uri("Assets/musique.mp3", UriKind.Relative));
 
-                // Volume initial (0.0 = muet, 1.0 = maximum)
-                _player.Volume = 0.5;
+            // volume initial (0.0 = muet, 1.0 = maximum)
+            _player.Volume = 0.5;
 
-                // Lecture en boucle
-                _player.MediaEnded += (s, e) =>
+            cbDifficulte.SelectionChanged += CbDifficulte_SelectionChanged;
+
+            // lecture en boucle
+            _player.MediaEnded += (s, e) =>
                 {
-                    _player.Position = TimeSpan.Zero;
-                    _player.Play();
-                };
+                _player.Position = TimeSpan.Zero;
+                _player.Play();
+            };
 
                 _player.Play();
-            }
-            catch (Exception ex)
+        }
+
+        private void CbDifficulte_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbDifficulte.SelectedItem is ComboBoxItem item)
             {
-                MessageBox.Show("Erreur lors du chargement du son : " + ex.Message);
+                ((MainWindow)Application.Current.MainWindow).NiveauDifficulte = item.Content.ToString();
             }
         }
 
-        // Exemple : changer le volume depuis un Slider
+        // changer le volume depuis un Slider
         private void VolumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             if (_player != null)
