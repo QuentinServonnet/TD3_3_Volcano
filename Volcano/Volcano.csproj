@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Game-over.wav" />
+    <None Remove="Assets\Jump.wav" />
     <None Remove="image choix personnage.png" />
     <None Remove="image\fond_jeu.png" />
     <None Remove="image\fond_parametre.png" />
@@ -48,6 +50,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Game-over.wav" />
+    <Resource Include="Assets\Jump.wav" />
     <Resource Include="image\fond_jeu.png" />
     <Resource Include="image\fond_parametre.png" />
   </ItemGroup>
