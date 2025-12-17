@@ -286,14 +286,14 @@ namespace Volcano
 
         private void VerifierCollisions()
         {
-            // 1) Tailles fiables : en WPF, ActualWidth/ActualHeight sont plus sûrs que Width/Height
+            // Tailles fiables
             double pW = (imgPerso.ActualWidth > 0) ? imgPerso.ActualWidth : imgPerso.Width;
             double pH = (imgPerso.ActualHeight > 0) ? imgPerso.ActualHeight : imgPerso.Height;
 
             double lW = (img_lave.ActualWidth > 0) ? img_lave.ActualWidth : img_lave.Width;
             double lH = (img_lave.ActualHeight > 0) ? img_lave.ActualHeight : img_lave.Height;
 
-            // 2) Hitbox joueur : même idée que ton "-15" mais mieux (on serre aussi un peu en haut/bas)
+            // hitbox joueur 
             Rect playerHitBox = new Rect(
                 Canvas.GetLeft(imgPerso) + 12,                 // marge gauche
                 Canvas.GetTop(imgPerso) + 8,                   // marge haut
@@ -301,7 +301,7 @@ namespace Volcano
                 Math.Max(1, pH - 12)                            // hauteur légèrement réduite
             );
 
-            // 3) Hitbox lave : même idée que ton "+20" mais avec bords serrés à gauche ET à droite
+            // Hitbox lave
             Rect lavaHitBox = new Rect(
                 Canvas.GetLeft(img_lave) + 25,                 // marge gauche (proche de ton +20)
                 Canvas.GetTop(img_lave) + 8,                   // marge haut (surface dangereuse)
@@ -315,7 +315,7 @@ namespace Volcano
                 return;
             }
 
-            // 4) Météorites : hitbox un peu plus "ronde" (on réduit 25% tout autour)
+            // meteorite hitbox
             foreach (Image m in meteorites)
             {
                 double mW = (m.ActualWidth > 0) ? m.ActualWidth : m.Width;
@@ -337,7 +337,7 @@ namespace Volcano
                 }
             }
 
-            // 5) Obstacles : léger serrage (évite collision "fantôme")
+            //Obstacles
             foreach (Image obs in obstacles)
             {
                 double oW = (obs.ActualWidth > 0) ? obs.ActualWidth : obs.Width;
@@ -451,7 +451,6 @@ namespace Volcano
 
             for (int i = 0; i < persos.Length; i++)
             {
-                // On tente d'abord les sprites animés (ex: Lina_1.png)
                 string framePath = $"pack://application:,,,/image/{prefix}{i + 1}.png";
 
                 try
